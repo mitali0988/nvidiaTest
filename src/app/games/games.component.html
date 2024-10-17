@@ -1,0 +1,11 @@
+<p>All games here!</p>
+<div class="container">
+  <div>
+    <input type="text" placeholder="Search..." [formControl]="searchControl" />
+  </div>
+  <div class="d-flex flex-wrap" *ngIf="games">
+    <div class="d-flex" *ngFor="let game of games">
+      <app-game-card [cardData]="game"></app-game-card>
+    </div>
+  </div>
+</div>

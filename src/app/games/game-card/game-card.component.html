@@ -1,0 +1,17 @@
+<div class="card h-100 m-2" style="width: 18rem">
+  <img [src]="cardData.photoUrl" [alt]="cardData.id" class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title">{{ cardData.title }}</h5>
+    <p class="card-text">
+      {{ cardData.descriptionShort }}
+    </p>
+    <a class="btn btn-primary" (click)="onClick($event, cardData.id)"
+      >>
+      {{
+        isFavouriteGame(cardData.id)
+          ? "Remove from Favorite"
+          : "Add as Favorite"
+      }}</a
+    >
+  </div>
+</div>
